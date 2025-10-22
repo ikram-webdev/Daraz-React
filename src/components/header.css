@@ -1,0 +1,132 @@
+.navbar {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  position: fixed;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar i {
+  font-size: 13px;
+  text-align: center;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 50vh;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo {
+  font-size: 29px;
+  font-weight: 400;
+  color: #161616;
+}
+.logo span {
+  color: #007bff;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.menu li {
+  position: relative;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: #007bff;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease forwards;
+  z-index: 100;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+  color: #000;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background: #f8f9fa;
+  color: #007bff;
+}
+
+.submenu {
+  position: relative;
+}
+
+.submenu-list {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #fff;
+  min-width: 180px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: none;
+  animation: fadeInRight 0.3s ease forwards;
+}
+
+.submenu:hover > .submenu-list {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

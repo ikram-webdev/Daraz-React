@@ -1,10 +1,11 @@
 import React from "react";
-import Daraz from "./project/daraz";
 import "./app.css";
+import ProfileContainer from "./components/ProfileContainer";
+
 function App() {
   return (
     <div>
-      <Daraz />
+      <ProfileContainer/>
     </div>
   );
 }
